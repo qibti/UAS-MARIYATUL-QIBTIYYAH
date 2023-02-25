@@ -1,0 +1,65 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() 
+{
+	cout << "~ Tugas Menerapkan Konsep & Membuat Algoritma Untuk Menyelesaikan Kasus ~" << endl;
+cout << "============================================================================" << endl;
+cout << endl;
+cout << "Nama          : Mariyatul Qibtiyyah" << endl;
+cout << "NIM           : 5520122012"<< endl;
+cout << endl;
+cout << "============================================================================" << endl;
+    
+string nama, prodi;
+int nim, sks;
+double biaya_per_sks, biaya_total, biaya_admin, rata_rata;
+int nilai[5];
+
+// Input data mahasiswa
+cout << "Masukkan nama: ";
+    getline(cin, nama);
+
+    cout << "Masukkan NIM: ";
+    cin >> nim;
+
+    cout << "Masukkan prodi: ";
+    cin >> prodi;
+
+    // Input nilai
+    for (int i = 0; i < 5; i++) {
+        cout << "Masukkan nilai ke-" << i+1 << ": ";
+        cin >> nilai[i];
+    }
+
+    // Hitung rata-rata
+    int jumlah = 0;
+    for (int i = 0; i < 5; i++) {
+        jumlah += nilai[i];
+    }
+    rata_rata = (double) jumlah / 5;
+
+    // Input jumlah SKS dan biaya per SKS
+    cout << "Masukkan jumlah SKS yang diambil: ";
+    cin >> sks;
+
+    cout << "Masukkan biaya per SKS: ";
+    cin >> biaya_per_sks;
+
+    // Hitung biaya kuliah dan biaya administrasi
+    biaya_total = sks * biaya_per_sks;
+    biaya_admin = biaya_total * 0.1;
+
+    // Output data mahasiswa, biaya total, biaya administrasi, dan rata-rata nilai
+    cout << "Nama: " << nama << endl;
+    cout << "NIM: " << nim << endl;
+    cout << "Program Studi: " << prodi << endl;
+    cout << "Jumlah SKS: " << sks << endl;
+    cout << "Biaya kuliah: " << biaya_total << endl;
+    cout << "Biaya administrasi: " << biaya_admin << endl;
+    cout << "Rata-rata nilai: " << rata_rata << endl;
+
+    return 0;
+}
